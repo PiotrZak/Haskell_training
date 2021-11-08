@@ -1,6 +1,7 @@
 module Main where
 import DataStructures.BinaryTree
 import DataStructures.PriorityQueue
+import Basic.Recursion
 
 
 -- some compilation errors (not crucial at this time)

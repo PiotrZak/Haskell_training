@@ -1,9 +1,10 @@
 module DataStructures.BinaryTree where
+import Prelude hiding (head, (!!))
 
 -- reduce O(n) to O(log n)
 -- that type of tree:
 --
---      v
+--      vclea
 --    /   \
 --   v     v
 --  / \   / \
@@ -29,7 +30,7 @@ tag (Branch v _ _) = v
 -- retrieves the leftmost element
 head :: Tree v a -> a
 head (Leaf _ a)     = a
-head (Branch _ x _) = head x
+head (Branch _ x _) = x
 
 
 type Size = Int

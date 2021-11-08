@@ -34,3 +34,8 @@ this symbol is called as function arrow
 
 and returns 
 - a value of the type on the right.
+
+____
+Pattern matching : 
+
+In a nutshell, patterns are like defining piecewise functions in math. You can specify different function bodies for different arguments using patterns. When you call a function, the appropriate body is chosen by comparing the actual arguments with the various argument patterns.
