@@ -4,7 +4,7 @@ import Prelude hiding (head, (!!))
 -- reduce O(n) to O(log n)
 -- that type of tree:
 --
---      vclea
+--
 --    /   \
 --   v     v
 --  / \   / \
@@ -35,8 +35,8 @@ head (Branch _ x _) = x
 
 type Size = Int
 
--- tag (Leaf  ..)       = 1
--- tag (Branch .. x y)  = tag x + tag y
+tag (Leaf  ..)       = 1
+tag (Branch .. x y)  = tag x + tag y
 
 leaf :: a => Tree Size a
 leaf a = Leaf 1 a

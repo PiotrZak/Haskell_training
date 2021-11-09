@@ -39,3 +39,22 @@ ____
 Pattern matching : 
 
 In a nutshell, patterns are like defining piecewise functions in math. You can specify different function bodies for different arguments using patterns. When you call a function, the appropriate body is chosen by comparing the actual arguments with the various argument patterns.
+
+____
+Haskel property of laziness:
+
+Lazy evaluation allows us to write more simple, elegant code than we could in a strict environment.
+
+https://mmhaskell.com/blog/2017/1/16/faster-code-with-laziness
+
+____
+
+-- $ - function application
+
+($) :: (a -> b) -> a -> b  
+f $ x = f x  
+
+ the $ function has the lowest precedence. Function application with a space is left-associative (so f a b c is the same as ((f a) b) c)), function application with $ is right-associative.
+ 
+ sum (filter (> 10) (map (*2) [2..10]))
+ sum $ filter (>10) $ map (*2) [2..10]

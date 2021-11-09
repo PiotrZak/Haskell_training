@@ -63,6 +63,8 @@ quicksort (x:xs) =
         biggerSorted = quicksort [a | a <- xs, a > x]
     in  smallerSorted ++ [x] ++ biggerSorted
 
+
+
 -- ghci> quicksort [10,2,5,3,1,6,7,4,2,3,4,8,9]
 -- [1,2,2,3,3,4,4,5,6,7,8,9,10]
 
@@ -70,5 +72,17 @@ quicksort (x:xs) =
 -- take 5
 -- [1,4,3] ++ [5] ++ [9,6,7]
 -- Now, if we sort [1,4,3] and [9,6,7]
+
+-- quicksoft with filter
+
+-- filter (<=x) xs      instead       a | a <- xs, a <= x
+-- filter (>x) xs       instead       a | a <- xs, a > x
+quicksortFilter :: (Ord a) => [a] -> [a]
+quicksortFilter [] = []
+quicksortFilter (x:xs) =
+    let smallerSorted = quicksortFilter (filter (<=x) xs)
+        biggerSorted = quicksortFilter (filter (>x) xs)
+    in  smallerSorted ++ [x] ++ biggerSorted
+
 
 
