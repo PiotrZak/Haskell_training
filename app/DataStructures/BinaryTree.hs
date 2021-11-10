@@ -13,6 +13,7 @@ import Prelude hiding (head, (!!))
 --         v   v
 --         a   a
 
+
 -- binary tree
 data Tree v a = Leaf v a
             | Branch v (Tree v a) (Tree v a)

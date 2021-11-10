@@ -70,7 +70,7 @@ quicksort (x:xs) =
 
 -- [5,1,9,4,6,7,3]
 -- take 5
--- [1,4,3] ++ [5] ++ [9,6,7]
+-- [1,4,3] ++ [5] ++ [9,6,7
 -- Now, if we sort [1,4,3] and [9,6,7]
 
 -- quicksoft with filter

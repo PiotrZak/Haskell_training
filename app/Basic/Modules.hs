@@ -277,8 +277,27 @@ phoneBookToMap xs = Map.fromListWith (\number1 number2 -> number1 ++ ", " ++ num
 
 Map.lookup "patsy" $ phoneBookToMap phoneBook -- r: ["827-9162","943-2929","493-2928"]
 
--- get the biggest value with spe
+-- get the biggest value with specifi
 Map.fromListWith max [(2,3),(2,5),(2,100),(3,29),(3,22),(3,11),(4,22),(4,15)]   -- r: [(2,100),(3,29),(4,22)]
 
+-- Data.Set
 
-Map.insertWith (+) 3 100 $ Map.fromList [(3,4),(5,103),(6,339)]
+text1 = "I just had an anime dream. Anime... Reality... Are they so different?"
+text2 = "The old man left his garbage can out and now his trash is all over my lawn!"
+
+-- intersection ( both elements in 2 texts)
+Set.intersection set1 set2  -- r: fromList " adefhilmnorstuy"
+
+-- difference (which elements are in 1 and vice versa)
+Set.difference set1 set2   -- r: fromList ".?AIRj"
+
+Set.difference set2 set1  -- r: fromList "!Tbcgvw"
+
+-- union unique in both
+Set.union set1 set2   -- r: fromList " !.?AIRTabcdefghijlmnorstuvwy"
+
+Set.filter odd $ Set.fromList [3,4,5,6,7,2,3,4]   -- r: fromLst [3,5,7]
+Set.map (+1) $ Set.fromList [3,4,5,6,7,2,3,4] -- r: fromList [3,4,5,6,7,8]
+
+
+
