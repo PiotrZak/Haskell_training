@@ -32,3 +32,25 @@ executable haskell
     build-depends:    base ^>=4.14.3.0
     hs-source-dirs:   app
     default-language: Haskell2010
+
+
+
+-- add test suite
+Test-Suite test-Calculator
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      app/Tests
+                       .
+  default-language:    Haskell2010
+  main-is:             CalculatorTests.hs
+  other-modules:       Calculator
+  build-depends:       base >=4.14 && <4.15, HUnit
+
+-- add test suite
+Test-Suite test-QuickSort
+    type:                exitcode-stdio-1.0
+    hs-source-dirs:      app/Tests
+                         .
+    default-language:    Haskell2010
+    main-is:             QuickSortTests.hs
+    other-modules:       Quicksort
+    build-depends:       base >=4.14 && <4.15, HUnit

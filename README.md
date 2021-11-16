@@ -63,3 +63,9 @@ f $ x = f x
  Ord type:
  
  The Ord class is used for totally ordered datatypes. ... The Ordering datatype allows a single comparison to determine the precise ordering of two objects. Ord , as defined by the Haskell report, implements a total order and has the following properties: Comparability.
+ 
+ ____
+ Tests:
+ ghci - haskell cli
+ 
+ cabal test

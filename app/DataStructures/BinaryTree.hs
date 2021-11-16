@@ -31,23 +31,23 @@ tag (Branch v _ _) = v
 -- retrieves the leftmost element
 head :: Tree v a -> a
 head (Leaf _ a)     = a
-head (Branch _ x _) = x
+-- head (Branch _ x _) = x
 
 
-type Size = Int
+-- type Size = Int
 
-tag (Leaf  ..)       = 1
-tag (Branch .. x y)  = tag x + tag y
+-- tag (Leaf  ..)       = 1
+-- tag (Branch .. x y)  = tag x + tag y
 
-leaf :: a => Tree Size a
-leaf a = Leaf 1 a
+-- leaf :: a => Tree Size a
+-- leaf a = Leaf 1 a
 
-branch :: Tree Size a -> Tree Size a -> Tree Size a
-branch x y = Branch(tag x + tag y) x y
+-- branch :: Tree Size a -> Tree Size a -> Tree Size a
+-- branch x y = Branch(tag x + tag y) x y
 
-(!!) :: Tree Size a -> Int -> a
-(Leaf _ a)      !! 0 = a
-(Branch _ x y)  !! n
-    | n < tag x      = x !! n
-    | otherwise      = y !! (n - tag x)
+-- (!!) :: Tree Size a -> Int -> a
+-- (Leaf _ a)      !! 0 = a
+-- (Branch _ x y)  !! n
+--    | n < tag x      = x !! n
+--    | otherwise      = y !! (n - tag x)
 
